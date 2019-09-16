@@ -6,9 +6,19 @@
     font-family: Houschka Pro Medium;
 	src: url('styles/fonts/HouschkaPro-Medium.otf');
 } 
+@keyframes changeskew {
+    from {
+      transform: skewY(5deg);
+    }
+  
+    to {
+      transform: skewY(-5deg);
+    }
+  }
 body{
     margin: 0;
     padding:0;
+    
 }
 .main{
    
@@ -22,10 +32,7 @@ body{
     align-items: center;
     
 }
-.ship{
-    position: absolute;
-    padding-bottom: 0em;
-}
+
 
 #container {
     display:flex;
@@ -38,7 +45,7 @@ body{
 }
 
 .large {
-    height:56px;
+    
     text-transform: uppercase;
     font-family: Houschka Pro Bold, sans-serif;
     -webkit-text-stroke-width: 0px; 
@@ -47,12 +54,14 @@ body{
     font-size: 72px;
     letter-spacing: 5px;
     font-weight: bold;  
+  
 }
 .text2{
     text-transform: uppercase;
     font-family: Hauschka Pro Medium, sans-serif;
     font-size: 14px;
-    margin:23px;
+    margin-top: 15px;
+    margin-bottom: 23px;
     color: #4d88ae;
       }
 .form, button{
@@ -90,15 +99,27 @@ button{
     border: 1px solid #ededed ;
     box-shadow: 0px 0px 1px 0px #e4e3e3;
 }
+
+#ship {
+   
+    align-self: center;
+    padding-bottom: 110px;
+    animation-duration: 2s;
+  animation-name: changeskew;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+   
+}
 .image-wrap{
    width: 329;
    height: 490;
    margin-top: 20px;
+   padding-right: 30px;
  }
  #lower {
     width: 100%;
     height: 460px;
-    background: linear-gradient(to bottom, #ddecfa 4px, #327dad 4px, #266b97 444px);
+    background: linear-gradient(to bottom, #ddecfa 1%, #0163a2 3%, #266b97 444px);
     z-index: -1;
  }
 .circles{
@@ -107,11 +128,12 @@ button{
    
     justify-content: space-between;
     margin-top: 65px;
+    padding-left: 20px;
  }
 .textbelow{
     width: 280px;
     height: 18px;
-   
+    padding-left: 20px;
     justify-content: space-between;
    
 }
